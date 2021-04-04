@@ -10,9 +10,9 @@ def isPrime(n : int) -> bool:
         return False
     if n in [2, 3, 5, 7]:
         return True
-    if n % 2 == 0:
+    if n % 2 == 0 or n % 3 == 0 or n % 5 == 0 or n % 7 == 0:
         return False
-    return firstFactor(n, 3) == n
+    return firstFactor(n, 11) == n
 
 tc = int(input())
 for z in range(tc):
